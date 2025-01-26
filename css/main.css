@@ -40,7 +40,7 @@ header .mo_only {display: none;}
 header .mo_only span {width: 50px; height: 10px; background-color: #fff;}
 
 header {padding: 20px; height: 100%; width: auto; position: fixed; right: 0; z-index: 99; background-color: transparent; border-bottom: 1px solid #393939;}
-header .menu {height: 100%;;}
+header .menu {height: 100%; display: none;}
 header .menu ul {display: flex; justify-content: center; align-items: flex-end; height: 100%; width: 100%; flex-direction: column;}
 header .menu ul li {margin-bottom: 20px;}
 header .menu ul li a:after {content: ""; display: inline-block; background: #48454a; width: 3px; height: 3px; border-radius: 50px; margin-left: 5px; transition: all 0.3s;}
