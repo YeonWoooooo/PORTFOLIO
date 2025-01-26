@@ -1,0 +1,16 @@
+@media (max-width: 1490px) {
+    #profile .wrap {flex-direction: column; align-items: center;}
+    #profile .wrap>div {width: 90%; margin-bottom: 30px;}
+    #profile .info .profile_img {width: 25%;}
+    #profile .edu_box {display: flex; justify-content: space-between; flex-wrap: wrap;}
+    #profile .edu_box .edu_text {width: 50%; margin-bottom: 40px;}
+    #profile .info_edu .edu_date {margin-bottom: 10px;}
+
+    .wrap {padding: 0 15px;}
+
+    .section05 .swiper-button-next, .swiper-button-prev {display: none;}
+}
+
+@media (max-width: 1199px) {
+    nav.menu {display: none;}
+}
