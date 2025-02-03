@@ -1,6 +1,43 @@
 $(function(){
     var winWidth=$(window).width();
 
+    var btn = $('#button');
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+        });
+
+        btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+        });
+
+    //nav
+    const links = document.querySelectorAll('.nav__link');
+    const light = document.querySelector('.nav__light');
+
+    function moveLight({ offsetLeft, offsetWidth }) {
+    light.style.left = `${offsetLeft - offsetWidth/4}px`;
+    }
+
+    function activeLink(linkActive) {
+    links.forEach(link => {
+        link.classList.remove('active');
+        linkActive.classList.add('active');
+    })
+    }
+
+
+    links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        moveLight(event.target);
+        activeLink(link);
+    })
+    })
+
     //skill bar
     function barAnimation(){
         $(".bar").each(function(){
@@ -33,6 +70,8 @@ $(function(){
         keyboard: true,
         },
     });
+
+    //gall
 
     var gall=$('.line_gallery');
     var gallBox=$('.line_gallery .line_gallery_box');
@@ -71,11 +110,14 @@ $(function(){
         console.log(itemData);
         $('.popup-1 .container-1').append('<img src="img/gallery'+itemData+'.png">');
         $('.popup-1').show();
+        $('.popup-1').css('position', 'fixed');
         $('.popup-1 .container-1').fadeIn();
     });
 
 
-    $('.popup_prev').click(function(){
+    $('.popup_prev').click(function(e){
+        e.preventDefault();
+        $('.popup-1 .container-1').empty();
         gallNum--;
         if(gallNum<1){
             gallNum=gallTotal;
@@ -86,7 +128,9 @@ $(function(){
     });
 
 
-    $('.popup_next').click(function(){
+    $('.popup_next').click(function(e){
+        e.preventDefault();
+        $('.popup-1 .container-1').empty();
         gallNum++;
         if(gallNum>gallTotal){
             gallNum=1;
@@ -96,7 +140,8 @@ $(function(){
     });
 
 
-    $('.popup_close').click(function(){
+    $('.popup_close').click(function(e){
+        e.preventDefault();
         $('.popup-1 .container-1').empty();
         $('.popup-1').hide();
     });
