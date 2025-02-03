@@ -67,7 +67,7 @@ header .menu ul li a:hover {color: #af88d8; padding-right: 10px;}
 header .menu ul li a:hover:after {background: #af88d8;}
 
 header .nav {background-color: var(--tab-color); width: 25em; height: 6em; border-radius: 2em; padding: 0 2em; box-shadow: 0 1em 1em rgba(0,0,0,0.2); display: flex; align-items: center; position: relative; overflow: hidden; left: 50%; transform: translateX(-50%); opacity: 0.3;}
-header .nav:hover {opacity: 1; transition: all 0.3s; margin-top: 5px; transition: all 0.3s;}
+header .nav:hover {opacity: 1; transition: all 0.3s; margin-top: 5px; box-shadow: 0px 5px 30px -10px #857a87;}
 header .nav .nav__links {width: 100%; display: flex; justify-content: space-between;}
 header .nav .nav__links:after {display: none;}
 header .nav .nav__links a {color: var(--white-color); font-size: 2.5rem; opacity: 0.5;}
@@ -86,36 +86,6 @@ header .nav__link.active a .bx-bell {color: var(--bell-icon-color); text-shadow:
 header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-icon-color); width: 3.5em;}
 
 /*Title_ani*/
-/* .ani_box {width: 62vw; position: absolute; top: 30%;}
-
-@keyframes ani1 {
-    from{
-        stroke-dashoffset: 1000px;
-    }
-    to {
-        stroke-dashoffset: 0px;
-    }
-}
-
-#ch1 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 0s forwards;}
-#ch2 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 1s forwards;}
-#ch3 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 1.5s forwards;}
-#ch4 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 2s forwards;}
-#ch5 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 2.5s forwards;}
-#ch6 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 3s forwards;}
-#ch7 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 3.5s forwards;}
-#ch8 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 4s forwards;}
-#ch9 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 4.5s forwards;}
-#ch10 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 5s forwards;}
-#ch11 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 5.5s forwards;}
-#ch12 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 6s forwards;}
-#ch13 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 6.5s forwards;}
-#ch14 {stroke-dashoffset: 1000; stroke-dasharray: 1000; animation: ani1 2s linear 7s forwards;} */
-
-/* .title_sub {position: absolute; top: 55%;} */
-
-/* .word {margin: auto; color: white; text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;} */
-
 .text-animation {min-height: 100vh; display: flex; justify-content: center; align-items: center;}
 .text-wrapper {position: relative;}
 .text-wrapper h2 {z-index: 4; color: #fff; font-size: 15vw;white-space: nowrap;position: absolute;transform: translate(-50%, -62%); font-family: "Noto Sans KR", sans-serif;}
