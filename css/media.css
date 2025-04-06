@@ -3,7 +3,7 @@
     #profile .wrap>div {width: 90%; margin-bottom: 30px;}
     #profile .info .profile_img {width: 25%;}
     #profile .edu_box {display: flex; justify-content: space-between; flex-wrap: wrap;}
-    #profile .edu_box .edu_text {width: 50%; margin-bottom: 40px;}
+    #profile .edu_box .edu_text {width: 33.3333%; margin-bottom: 40px;}
     #profile .info_edu .edu_date {margin-bottom: 10px;}
 
     .wrap {padding: 0 15px;}
@@ -13,4 +13,52 @@
 
 @media (max-width: 1199px) {
     nav.menu {display: none;}
+    .license {margin-bottom: 30px;}
+    .section03 .card ul li {margin-right: 10px;}
+}
+
+@media (max-width: 1165px) {
+    .section03 .down {flex-direction: column; margin-top: 30px;}
+    .section03 .down .left {width: 100%;}
+    .section03 .down .left a {margin-top: 50px;}
+    .section03 .card {padding: 10px 0; min-height: auto;}
+    .section03 .card01 {top: 0;}
+    .section03 .card02 {top: 40px;}
+    .section03 .card03 {top: 80px;}
+    .section03 .card04 {top: 120px;}
+    .section03 .card05 {top: 160px;}
+    .section03 .down .right {margin-top: 50px;}
+    .section03 .down .right img {width: 100%;}
+
+    .section04 {padding: 100px 0;}
+
+    .section05 .swiper {width: 95%;}
+}
+
+@media (max-width: 991px) {
+    #profile {overflow: hidden;}
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 769px) {
+    #profile .info {flex-direction: column;}
+    #profile .info .profile_img {width: 65%; margin: 0 auto;}
+    .section02 .info ul {margin-top: 50px;}
+    #profile .edu_box {flex-direction: column;}
+    #profile .edu_box .edu_text {width: 100%;}
+    .license ul li {width: 45%;}
+    .section02 .info {align-items: start;}
+
+    .section03 .down .skill {overflow: hidden;}
+    .section03 .card ul {overflow-y: scroll;}
+    .section03 .card ul::-webkit-scrollbar {display: none;}
+}
+
+@media (max-width: 480px) {
+    .section02 .info ul {width: 90%;}
+
+    .section03 .card ul li {padding: 10px 15px; font-size: 12px;}
 }
