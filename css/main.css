@@ -4,7 +4,7 @@
 
 /* Reset CSS  */
 html { height: 100%; overflow-y:scroll;}
-body { font-size: 13px; color:#333;}
+body {font-size: 13px; color:#333;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td, p { margin: 0px; padding:0px;  list-style:none;  font-family: 'Pretendard';}
 fieldset{ border: 0px; }
 a{font-style:normal; text-decoration:none; color:#333;}
@@ -81,6 +81,8 @@ header .nav__link.active a .bx-user {color: var(--user-icon-color); text-shadow:
 header .nav__link:nth-child(4).active~.nav__light {background-color: var(--user-icon-color); width: 3.5em;}
 header .nav__link.active a .bx-bell {color: var(--bell-icon-color); text-shadow: 0 0 15px var(--bell-icon-color), 0 0 30px var(--bell-icon-color), 0 0 45px var(--bell-icon-color), 0 0 60px var(--bell-icon-color);}
 header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-icon-color); width: 3.5em;}
+
+
 
 /*Title_ani*/
 .text-animation {min-height: 100vh; display: flex; justify-content: center; align-items: center;}
@@ -165,21 +167,24 @@ header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-
 .section02 .info ul li .info_text_kr {font-weight: 700; font-size: 30px;}
 .section02 .info ul li .info_text p:nth-child(2) {margin-top: 5px;}
 /*edu*/
-.section02 .info_edu .edu_text {margin-bottom: 20px;}
+.section02 .info_edu .edu_text {margin-bottom: 20px; cursor: pointer; display: flex; justify-content: center; align-items: flex-start; transition: background-color 0.3s, color 0.3s; flex-direction: column;}
 .edu_text p {font-size: 16px; line-height: 26px; font-weight: 400; padding-left: 5px;}
 .edu_text p span {color: #5907a5; font-weight: 700; border-bottom: 1px solid #c1c1c1;}
 .section02 .info_edu .edu_date {font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 5px; background: #5907a5; display: inline-block; padding: 5px 10px; border-radius: 5px;}
-.section02 .info_edu .edu_tit {font-size: 22px; margin-bottom: 5px; font-weight: 600;}
-.section02 .edu .edu_date {color: #5907a5; background-color: transparent; padding: 0;}
-.section02 .edu .edu_text p {padding: 0;}
+.section02 .info_edu .edu_tit {font-size: 22px; margin-bottom: 5px; font-weight: 600; display: flex; align-items: center;}
+.section02 .edu_p {display: none;}
+.section02 .edu_text p {padding: 0;}
 .edu {margin-bottom: 30px;}
+.section02 .info_edu .edu_icon {transition: transform 0.3s; font-size: 0.6em; border-bottom: none; margin-left: 10px; display: inline-block;}
+.section02 .info_edu .edu_text.active .edu_p {padding: 0 0 10px;}
+.section02 .info_edu .edu_text.active .edu_icon {transform: rotate(180deg);}
 /*license*/
 .license ul {display: flex; flex-wrap: wrap; text-align: center; justify-content: space-between;}
 .license ul li {font-size: 20px; width: 30%; margin-bottom: 30px; font-size: 18px; font-weight: 200;}
 .license ul li p:first-child {border-bottom: 1px solid #ddd; margin-bottom: 8px;}
 .license ul li p:nth-child(2) {font-size: 20px; font-weight: 600;}
 /*skill*/
-.skills-bar .bar {margin: 20px 0;}
+/* .skills-bar .bar {margin: 20px 0;}
 .skills-bar .bar:first-child {margin-top: 0px;}
 .skills-bar .bar .info {margin-bottom: 5px;}
 .skills-bar .bar .info span {font-size: 17px; font-weight: 500; opacity: 0; animation:  showText 0.5s 1.5s linear forwards;}
@@ -213,7 +218,20 @@ header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-
 .progress-line.figma span::after{content: "80%";}
 .progress-line.html span::after{content: "90%";}
 .progress-line.css span::after{content: "80%";}
-.progress-line.js span::after{content: "80%";}
+.progress-line.js span::after{content: "80%";} */ /*스킬 프로그래스 바*/
+
+
+/*info_skill2*/
+.skill_wrap {display: flex; justify-content: space-evenly; flex-wrap: wrap;}
+.skills {display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;}
+.skill {text-align: center; width: 30%; margin-bottom: 50px; cursor: pointer;}
+.skill:nth-last-child(-n + 3) {margin-bottom: 0;}
+.skill img {width: 35%;margin-bottom: 12px; transition: transform 0.35s cubic-bezier(0.22, 1, 0.36,1), filter 0.35s ease;}
+.skill i {display: block; font-size: 4.5vw; width: 100%; margin-bottom: 12px; transition: transform 0.35s cubic-bezier(0.22, 1, 0.36,1), filter 0.35s ease;}
+.skill:hover img, .skill:hover i {transform: translateY(-7px) scale(1.12) rotate(-5deg); filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.12));}
+.skill p {font-size: 14px; margin: 0; font-weight: 500; transition: color 0.3s ease, transform 0.3s ease;}
+.skill:hover p {transform: translateY(-2px); color: #555;}
+
 
 /*section03_project*/
 .section03 .card {position: sticky; background: #0d0611; min-height: 700px;}
@@ -224,7 +242,7 @@ header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-
 .section03 .card04 {top: 250px;}
 .section03 .card05 {top: 290px;}
 .section03 .card06 {top: 330px;}
-.section03 .card h3 {font-size: 1.4rem;}
+.section03 .card h3 {font-size: 1.4rem; border-bottom: 1px solid #252227; padding-bottom: 7px;}
 .section03 .card h3 span {color: #fff; margin-left: 20px;} 
 .section03 .down {margin-top: 60px; font-size: 20px; display: flex;}
 .section03 .down .left {width: 45%; display: flex; flex-direction: column; justify-content: center;}
@@ -234,9 +252,9 @@ header .nav__link:nth-child(5).active~.nav__light {background-color: var(--bell-
 .section03 .card .title span:before {content: ""; display: inline-block; margin: 0 20px; background: #d7d7d7; width: 1px; height: 20px;}
 .section03 .card .text {margin: 30px 0 0 0; color: #d7d7d7; font-weight: 200; line-height: 30px;}
 .section03 .card ul {display: flex;}
-.section03 .card ul li {padding: 10px 20px; border-radius: 30px; border: 1px solid #d7d7d7; color: #808080; margin-right: 20px; font-size: 16px; transition: all 0.3s;}
+.section03 .card ul li {padding: 10px 20px; border-radius: 30px; border: 1px solid #808080; color: #808080; margin-right: 20px; font-size: 16px; transition: all 0.3s;}
 .section03 .card ul li:hover {color: #d7d7d7;}
-.section03 .down .left a {margin-top: 150px; display: block; color: #d7d7d7; transition: all 0.3s; font-weight: 200;}
+.section03 .down .left a {margin-top: 150px; display: block; color: #ffffff; transition: all 0.3s; font-weight: 200;}
 .section03 .down .left a:hover {padding-left: 10px;}
 
 
