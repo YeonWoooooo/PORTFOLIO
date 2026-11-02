@@ -38,6 +38,20 @@ $(function(){
     })
     })
 
+    $('.edu_text').off('click').on('click', function() {
+        const $this = $(this);
+        const $target = $this.find('.edu_p');
+
+        // 다른 항목 닫기
+        $('.edu_text').not($this).removeClass('active');
+        $('.edu_p').not($target).slideUp();
+
+        // 현재 항목의 열림 상태 반전
+        const isOpening = !$target.is(':visible');
+        $this.toggleClass('active', isOpening);
+        $target.slideToggle();
+    });
+
     //skill bar
     function barAnimation(){
         $(".bar").each(function(){
@@ -115,6 +129,8 @@ $(function(){
     });
 
 
+
+    // gall_popup
     $('.popup_prev').click(function(e){
         e.preventDefault();
         $('.popup-1 .container-1').empty();
